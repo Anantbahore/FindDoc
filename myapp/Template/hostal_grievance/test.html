@@ -1,0 +1,76 @@
+{% extends "hostal_grievance/Base.html" %} {% block content %}
+<div class="row">
+  <div class="d-flex justify-content-center col-12">
+    <form class="justify-content-center col-8"  method = "POST">
+    {% csrf_token %}
+      <div class="form-row">
+        <div class="col-3">
+          <label>First Name</label>
+          <input type="text" class="form-control" name = "name" placeholder="First name" />
+        </div>
+        <div class="col-3">
+          <label>Last Name</label>
+          <input type="text" class="form-control" name = "lastname" placeholder="Last name" />
+        </div>
+
+        <div class="col-3">
+          <label>Room No</label>
+          <input type="number" class="form-control" name = "roomno" placeholder="First name" />
+        </div>
+        <div class="col-3">
+          <label for="exampleFormControlSelect1">Sem</label>
+          <select type = 'number' class="form-control" id="exampleFormControlSelect1" name = 'sem'>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+          </select>
+        </div>
+        <div class="form-group col-6">
+          <label for="exampleInputEmail1">Medi-Caps Email-Id </label>
+          <input
+            type="email"
+            class="form-control col"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+            name = 'email'
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group col-6">
+          <label>Branch</label>
+          <select class="custom-select" name = 'branch'>
+            <option selected>Branch</option>
+            <option value=1>CSE</option>
+            <option value=2>ME</option>
+            <option value=3>CIVIL</option>
+            <option value=4>EC</option>
+            <option value=5>CSBS</option>
+            <option value=6>IT</option>
+            <option value=7>RPC</option>
+            <option value=8>CE</option>
+          </select>
+        </div>
+        <div class="from-row col-12">
+          <label for="exampleFormControlTextarea1">Example textarea</label>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            name = 'query'
+          ></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
